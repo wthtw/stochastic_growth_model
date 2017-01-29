@@ -37,7 +37,7 @@ Pour résoudre f(x) = 0, pour a < x < b ;  a et b peuvent être Inf
 
  * Méthode semismooth
  >Pour une fonction f, un intervalle [a,b], et une valeur initiale x0, `ncpsolve(’f’,a,b,x)`
- * Méthode minmax 
+ * Méthode minmax
  >Spécifier d’abord l’option 'type'
  >`optset('ncpsolve','type','minmax')`
 
