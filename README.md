@@ -1,25 +1,25 @@
 # Notes de cours - Méthodes numeriques  
 
 ## Système d’équations linéaire : Ax = b
-### Méthodes directes () 
+#### Méthodes directes () 
   > Décomposition LU, Cholesky ` x = A\b `
     
-### Méthode itérative (forme Qx = b + (Q − A)x)
+#### Méthode itérative (forme Qx = b + (Q − A)x)
 
   >Gauss-jacobi : `gjacobi (A,b)`
   
   >Gauss-seidel : `gseidel (A,b)`
 
 ## Systèmes d’équations non linéaires : Points fixes, Solutions racines
-### Méthode bisection, sur un interval [a,b]
+#### Méthode bisection, sur un interval [a,b]
 
   > Pour une fonction f, `bisect (‘f’,a,b)`
 
-### Méthode Newton : un ou plusieurs variables, avec des valeurs initiales , utilise le jacobien
+#### Méthode Newton : un ou plusieurs variables, avec des valeurs initiales , utilise le jacobien
 
   > Pour une fonction f à 2 variables, avec des valeurs initiales respectives x1 et x2 `newton(’f’,[x1;x2])`
 
-### Méthode Quasi-Newton : utilise une approximation du jacobien
+#### Méthode Quasi-Newton : utilise une approximation du jacobien
 
   * Secant Method : une variable
 
