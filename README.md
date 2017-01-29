@@ -1,7 +1,7 @@
 # Notes de cours - Méthodes numeriques
 
 ## Système d’équations linéaire : Ax = b
-#### Méthodes directes () 
+### Méthodes directes
 Décomposition LU, Cholesky ` x = A\b `
     
 ### Méthode itérative (forme Qx = b + (Q − A)x)
@@ -98,6 +98,19 @@ Pour une fonction f à 2 variables, avec des valeurs initiales respectives x1 et
  Ici les *n* nodes *x* sont déterministes, sur une intervalle [a,b] ;  les weights *w=(b-a)/n* étant identiques
 
  L’espérance de *f* est obtenue par `Somme(w*f(x))`
+ 
+ ### Méthode de différentiation
+ Pour une fonction *f*, une approximation *O(h²)* de sa dérivée, autour du point *x0*, est de la forme:
+ *f’(x0) = a*f(x0) + b*f(x0 + h) + c*f(x0 + alpha*h) [ + O(h²)]*
+ 
+ >où (x0 + h), (x0 + alpha*h) sont deux autres points,
+ >choisir, alpha = 2, et choisir h quelconque, les paramètres a, b et c, s’obtiennent en résolvant le système suivant :
+ ```
+ a + b + c = 0
+ b + cλ = 1/h
+ b + cλ2 = 0
+ ```
+
 
 
 
