@@ -1,4 +1,4 @@
-# Notes de cours - Méthodes numeriques
+# Méthodes numeriques - Notes de cours
 
 ## Système d’équations linéaire : Ax = b
 ### Méthodes directes
