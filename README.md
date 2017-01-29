@@ -4,22 +4,22 @@
 #### Méthodes directes () 
 Décomposition LU, Cholesky ` x = A\b `
     
-#### Méthode itérative (forme Qx = b + (Q − A)x)
+### Méthode itérative (forme Qx = b + (Q − A)x)
 
 Gauss-jacobi : `gjacobi (A,b)`
   
 Gauss-seidel : `gseidel (A,b)`
 
 ## Systèmes d’équations non linéaires : Points fixes, Solutions racines
-#### Méthode bisection, sur un interval [a,b]
+### Méthode bisection, sur un interval [a,b]
 
 Pour une fonction f, `bisect (‘f’,a,b)`
 
-#### Méthode Newton : un ou plusieurs variables, avec des valeurs initiales , utilise le jacobien
+### Méthode Newton : un ou plusieurs variables, avec des valeurs initiales , utilise le jacobien
 
 Pour une fonction f à 2 variables, avec des valeurs initiales respectives x1 et x2 `newton(’f’,[x1;x2])`
 
-#### Méthode Quasi-Newton : utilise une approximation du jacobien
+### Méthode Quasi-Newton : utilise une approximation du jacobien
 
  * Secant Method : une variable
 
@@ -28,7 +28,7 @@ Pour une fonction f à 2 variables, avec des valeurs initiales respectives x1 et
     
  >**Note :** Pour ces méthodes, on peut ajouter une backstepping routine, pour éviter les divergences
 
-#### Méthodes exclusives pour Point-fixes
+### Méthodes exclusives pour Point-fixes
  * Méthode Itération de fonction, pour une valeur initiale x0
  Pour une fonction g, 
  
@@ -48,7 +48,7 @@ Pour une fonction f à 2 variables, avec des valeurs initiales respectives x1 et
  `optset('ncpsolve','type','minmax')`
 
 ## Problèmes d’optimisation (recherche du maximum et du minimum)
-#### Méthodes sans dérivées :
+### Méthodes sans dérivées :
  * Method Golden Search : une variable, optimum local sur un interval [a,b]
  Pour une fonction f, sur un interval [a,b] 
  
@@ -60,29 +60,28 @@ Pour une fonction f à 2 variables, avec des valeurs initiales respectives x1 et
  `neldmead(’f’,[x1;x2])`
 
 ## Méthode d’intégration et de différentiation
-#### Méthode d’intégration
+### Méthode d’intégration
 
-**Calcul de l'aire**
+#### Calcul de l'aire
  * Méthodes Newton-cotes : calcul de l’aire sous la fonction
-
-**Trapezoid rule :** pour les fonctions discontinues ayant des points d’inflexion
-
-Pour n trapezes, sur un intervalle [a,b], *n* les nodes et *w* les weights,
-
-`[x,w] = qnwtrap(n,a,b)`
-
-**Simpson rule :** pour les fonctions plus lisses
-
-`[x,w] = qnwsimp(n,a,b)`
-
->Si *w(x)=1*, on calcule l’aire sous la fonction
+ **Trapezoid rule :** pour les fonctions discontinues ayant des points d’inflexion
+ 
+ Pour n trapezes, sur un intervalle [a,b], *n* les nodes et *w* les weights,
+ 
+ `[x,w] = qnwtrap(n,a,b)`
+ 
+ **Simpson rule :** pour les fonctions plus lisses
+ 
+ `[x,w] = qnwsimp(n,a,b)`
+ 
+  >Si *w(x)=1*, on calcule l’aire sous la fonction
 
 * Méthodes Gaussian quadrature
 Legendre quadrature, pour w(x) = 1 
 
 `[x,w] = qnwlege(n,a,b)`
 
-**Calcul de l’espérance**
+#### Calcul de l’espérance
 * Méthodes Gaussian quadrature
 Pour x suivant une **loi normale (mu, var)**, *n* les nodes gaussiens et *w* les weights gaussiens,
 
