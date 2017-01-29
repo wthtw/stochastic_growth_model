@@ -3,7 +3,7 @@ Essentiel de mes notes du cours d'economie computationelle appliquee
 ## Système d’équations linéaire : Ax = b
 
 Méthodes directes : Décomposition LU/ Cholesky
-```matlab
+```R
 x = A\b
 ```
 * Méthode itérative : Qx = b + (Q − A)x
