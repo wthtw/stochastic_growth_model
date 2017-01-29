@@ -28,4 +28,14 @@
     
     > **Note :** Pour ces méthodes, on peut ajouter une backstepping routine, pour éviter les divergences
 
+#### Méthodes exclusives pour Point-fixes
+   * Méthode Itération de fonction, pour une valeur initiale x0
+    > Pour une fonction g, `fixpoint(’g’,x0)`
 
+   * Complementary Method : utilise le jacobien
+Pour résoudre f(x) = 0, pour a < x < b ;  a et b peuvent être Inf
+
+   * Méthode semismooth
+    > Pour une fonction f, un intervalle [a,b], et une valeur initiale x0, `ncpsolve(’f’,a,b,x)`
+   * Méthode minmax
+    > Spécifier d’abord l’option “type” `optset(’ncpsolve’,’type’,’minmax’)`
