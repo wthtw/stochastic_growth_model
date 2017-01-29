@@ -33,7 +33,7 @@
  >Pour une fonction g, `fixpoint(’g’,x0)`
 
  * Complementary Method : utilise le jacobien
-Pour résoudre f(x) = 0, pour a < x < b ;  a et b peuvent être Inf
+Pour résoudre f(x) = 0, pour *8a < x < b* ;  a et b peuvent être Inf
 
  * Méthode semismooth
  >Pour une fonction f, un intervalle [a,b], et une valeur initiale x0, `ncpsolve(’f’,a,b,x)`
@@ -55,34 +55,42 @@ Pour résoudre f(x) = 0, pour a < x < b ;  a et b peuvent être Inf
 **Calcul de l'aire**
 * Méthodes Newton-cotes : calcul de l’aire sous la fonction
 
-**Trapezoid rule :** pour les fonctions discontinues et avec des points d’inflexion
-Pour n trapezes, sur un intervalle [a,b], les nodes  et les weights w `[x,w] = qnwtrap(n,a,b)`
+**Trapezoid rule :** pour les fonctions discontinues ayant des points d’inflexion
 
-**Simpson rule :** pour les fonctions plus lisses `[x,w] = qnwsimp(n,a,b)`
+Pour n trapezes, sur un intervalle [a,b], *n* les nodes et *w* les weights,
 
->**Note :** Si w(x)=1, on calcule l’aire sous la fonction
+`[x,w] = qnwtrap(n,a,b)`
+
+**Simpson rule :** pour les fonctions plus lisses
+
+>`[x,w] = qnwsimp(n,a,b)`
+
+>Si *w(x)=1*, on calcule l’aire sous la fonction
 
 * Méthodes Gaussian quadrature
->Legendre quadrature, pour w(x) = 1 `[x,w] = qnwlege(n,a,b)`
+>Legendre quadrature, pour w(x) = 1 
+
+>`[x,w] = qnwlege(n,a,b)`
 
 **Calcul de l’espérance**
 * Méthodes Gaussian quadrature
-Si w(x) = *fonction de densité de probabilité* de x, on calcule l’espérance de la fonction
-Pour x suivant une **loi normale (mu, var)**, x les nodes gaussiens et w les weights gaussiens,
+Pour x suivant une **loi normale (mu, var)**, *n* les nodes gaussiens et *w* les weights gaussiens,
 
 `[x,w] = qnwnorm(n,mu, var)`
 
-L’espérance de la fonction est obtenue ensuite par `Somme(w*f(x))`
+>Si w(x) = *fonction de densité de probabilité* de *x*, on calcule l’espérance de la fonction
+
+>L’espérance de la fonction est obtenue ensuite par `Somme(w*f(x))`
 
 * Méthodes Intégration Monte-Carlo
-Il faut générer pseudoaléatoirement n nodes x d’après la distribution ; les weights `w=1/n` étant identiques
+>Il faut générer pseudoaléatoirement *n* nodes *x* d’après la distribution ; les weights *w=1/n* étant identiques
 
-L’espérance de f est obtenue par `Somme(w*f(x))`
+>L’espérance de *f* est obtenue par `Somme(w*f(x))`
 
 * Méthodes Quasi-Monte Carlo
-Ici les n nodes x sont déterministes, sur une intervalle [a,b] ;  les weights `w=(b-a)/n` étant identiques
+>Ici les *n* nodes *x* sont déterministes, sur une intervalle [a,b] ;  les weights *w=(b-a)/n* étant identiques
 
-L’espérance de f est obtenue par `Somme(w*f(x))`
+>L’espérance de *f* est obtenue par `Somme(w*f(x))`
 
 
 
