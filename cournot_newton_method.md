@@ -1,4 +1,4 @@
-``` MATLAB
+```Matlab
 clear; clc;
 tol = 0.0001; %Tolerance
 maxit = 100; %max iterations
