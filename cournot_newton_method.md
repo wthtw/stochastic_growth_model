@@ -1,3 +1,4 @@
+``` MATLAB
 clear; clc;
 tol = 0.0001; %Tolerance
 maxit = 100; %max iterations
@@ -25,3 +26,4 @@ hold on
 hold on
 plot(Qsav(:,1),Qsav(:,2),':o'); %plot the points found through the iterations
 colormap cool
+```
