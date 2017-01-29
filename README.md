@@ -7,6 +7,5 @@ Méthodes directes (Décomposition LU/Cholesky) `x = A\b`
 Méthode itérative **Qx = b + (Q − A)x)**
   
   Gauss-jacobi : `gjacobi (A,b)`
-  
   Gauss-seidel : `gseidel (A,b)`
 
