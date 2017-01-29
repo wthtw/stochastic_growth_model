@@ -1,4 +1,5 @@
-# Notes de cours - Méthodes numeriques  
+# Notes de cours - Méthodes numeriques
+> **Note :** MATLAB script
 
 ## Système d’équations linéaire : Ax = b
 #### Méthodes directes () 
@@ -39,3 +40,5 @@ Pour résoudre f(x) = 0, pour a < x < b ;  a et b peuvent être Inf
     > Pour une fonction f, un intervalle [a,b], et une valeur initiale x0, `ncpsolve(’f’,a,b,x)`
    * Méthode minmax
     > Spécifier d’abord l’option “type” `optset(’ncpsolve’,’type’,’minmax’)`
+
+## Problèmes d’optimisation (recherche du maximum et du minimum)
