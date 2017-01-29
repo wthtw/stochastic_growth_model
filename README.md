@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 # Méthodes numeriques - Notes de cours
 
 ## Système d’équations linéaire : Ax = b
