@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 # Méthodes numeriques - Notes de cours
 
 ## Système d’équations linéaire : Ax = b
@@ -126,9 +124,7 @@ Le principe de résolution est de dériver une approximation de taylor de  à l�
 
 >Méthode de Euler : *y(t+h) = y(t) + y'(t)h*
 
->Méthode Runge-Kutta 2 : *y(t+h) = y(t) + h[a_1k_1 + a_2k_2]*,
-
-(E=mc^2)，$$x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2b}.$$
+>Méthode Runge-Kutta 2 : *y(t+h) = y(t) + h[a_1k_1 + a_2k_2]*
 
 
 
