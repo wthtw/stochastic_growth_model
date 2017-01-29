@@ -63,30 +63,30 @@ Pour une fonction f à 2 variables, avec des valeurs initiales respectives x1 et
 ### Méthode d’intégration
 
 #### Calcul de l'aire
- * Méthodes Newton-cotes : calcul de l’aire sous la fonction
- **Trapezoid rule :** pour les fonctions discontinues ayant des points d’inflexion
+* Méthodes Newton-cotes : calcul de l’aire sous la fonction
+**Trapezoid rule :** pour les fonctions discontinues ayant des points d’inflexion
  
  Pour n trapezes, sur un intervalle [a,b], *n* les nodes et *w* les weights,
  
  `[x,w] = qnwtrap(n,a,b)`
  
- **Simpson rule :** pour les fonctions plus lisses
+**Simpson rule :** pour les fonctions plus lisses
  
  `[x,w] = qnwsimp(n,a,b)`
  
-  >Si *w(x)=1*, on calcule l’aire sous la fonction
+ >Si *w(x)=1*, on calcule l’aire sous la fonction
 
-* Méthodes Gaussian quadrature
-Legendre quadrature, pour w(x) = 1 
+ * Méthodes Gaussian quadrature
+  Legendre quadrature, pour w(x) = 1 
 
-`[x,w] = qnwlege(n,a,b)`
+ `[x,w] = qnwlege(n,a,b)`
 
 #### Calcul de l’espérance
 * Méthodes Gaussian quadrature
-Pour x suivant une **loi normale (mu, var)**, *n* les nodes gaussiens et *w* les weights gaussiens,
-
-`[x,w] = qnwnorm(n,mu, var)`
-
+ Pour x suivant une **loi normale (mu, var)**, *n* les nodes gaussiens et *w* les weights gaussiens,
+ 
+ `[x,w] = qnwnorm(n,mu, var)`
+ 
  >Si w(x) = *fonction de densité de probabilité* de *x*, on calcule l’espérance de la fonction par `Somme(w*f(x))`
 
 * Méthodes Intégration Monte-Carlo
