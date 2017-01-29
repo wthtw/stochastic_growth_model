@@ -1,4 +1,4 @@
-# Méthodes numeriques - Notes de cours
+# Méthodes numeriques avec MATLAB - Notes de cours
 
 ## Système d’équations linéaire : Ax = b
 ### Méthodes directes
