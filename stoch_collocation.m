@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%   stoch_collocation.m:  A Matlab program to solve a simple stochastic growth 
-%                 model via collocation.
+%   stoch_collocation.m:  A Matlab program to solve a simple 
+%   stochastic growth model via collocation.
 %
 %   Youssef de Madeen Amadou, Winter 2014
 %
