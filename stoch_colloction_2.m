@@ -6,6 +6,7 @@
 %   Youssef de Madeen Amadou, Winter 2014
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Initializing time chrono
 tic;
 clc;clear;
