@@ -2,7 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %   stoch_fi.m:  A Matlab program to solve a simple stochastic growth 
-%                 model using Function Iteration.
+%   model using Function Iteration.
 %
 %   Youssef de Madeen Amadou, Winter 2014
 %
