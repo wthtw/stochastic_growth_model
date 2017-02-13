@@ -46,8 +46,7 @@ util = zeros(nbk,nbe);
 temp = bsxfun(@times,muZ*(kgrid.^alpha) + (1-delta).*kgrid - kgrid,ones(nbk,nbe));
 V = bsxfun(@rdivide, temp.^(1-sigma)-1, 1-sigma);
 neg = temp<0;
-V(neg) = -1e12;
-%V = zeros(nbk,nbe);
+V(neg) = -1e12; %V = zeros(nbk,nbe);
 
 % Iterations
 for it=1:3000
@@ -69,15 +68,18 @@ for it=1:3000
 end
 
 % Getting the optimal policy K'* for each K in the grid
-Kp_fi = kgrid(dr);
+Kp = kgrid(dr);
 
 % Computing the optimal policy C* for each K in the grid
-for k=1:nbe;
-C_fi(:,k) = Z(k).*(kgrid.^alpha) + (1-delta).*kgrid - Kp_fi(:,k);
+for k = 1:nbe;
+C(:,k) = Z(k).*(kgrid.^alpha) + (1-delta).*kgrid - Kp(:,k);
 end
-neg = C_fi<0;
-C_fi(neg) = 1e-6;
+neg = C<0;
+C(neg) = 1e-6;
 util(neg) = -1e12;
 
-% getting the duration in processor time
-t_fi = toc;
+% Closing chrono
+t = toc;
+
+% Save the results
+save ('Kp','Kp'); save ('C','C'); save ('t','t'); save ('c','c');
