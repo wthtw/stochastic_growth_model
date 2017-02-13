@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %   stoch_collocation.m:  A Matlab program to solve a simple stochastic growth 
-%                 model using Collocation Method.
+%                 model using Collocation Method
 %
 %   Youssef de Madeen Amadou, Winter 2014
 %
@@ -78,6 +78,7 @@ C = bsxfun(@plus,temp3,-Kp);
 neg = C<0; C(neg) = 1e-6;
 util(neg) = -1e12;
 
+% Saving results
 save ('Kp','Kp'); save ('C','C'); save ('t','t'); save ('c','c')
 
 
