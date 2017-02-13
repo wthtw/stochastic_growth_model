@@ -1,4 +1,11 @@
-%% Simulating the solved stochastic growth model
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   stoch_simulation.m:  A Matlab program to simulate a simple stochastic 
+%   growth model using Function Iteration
+%
+%   Youssef de Madeen Amadou, Winter 2014
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 T = 200;        % number of periods
 p = rand(T,1);  % uniformly distributed 'p' considered as probabilities
