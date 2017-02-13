@@ -1,14 +1,25 @@
-%% Solving a stochastic growth model with collocation method
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   stoch_collocation.m:  A Matlab program to solve a simple stochastic growth 
+%                 model via collocation.
+%
+%   Youssef de Madeen Amadou, Winter 2014
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initializing time chrono
 tic;
-
 clc;clear;
+
+%
+%  Parameter values
+%
 
 sigma = 1.50;       % utility parameter
 delta = 0.10;       % depreciation rate
 beta = 0.95;        % discount factor
 alpha = 0.30;       % capital elasticity of output
 rho = 0.80;         % persistence of the shock on Z
-epsi = 1e-5;       % convergence parameter
+epsi = 1e-5;        % convergence parameter
 
 % Discretization of the shocks, Markov AR(1) process
 nbe = 15;           % number of shocks, 15
@@ -19,7 +30,7 @@ mu = 0;             % mean of shocks residuals iid normal process
 muZ = 0.5;            % mean of shocks
 [Z,P] = tauchenhussey(nbe,muZ,rho,se,se);
 
-% constructing grid values for K, using collocation method
+% Constructing grid values for K, using collocation method
 nbk     = 50;        % number of collocation points, 50
 kmin  = 0.2;
 kmax  = 6;
@@ -27,18 +38,18 @@ basis = fundefn('lin',nbk,kmin,kmax);  % cubic spline basis
 kgrid = funnode(basis);                    
 Phi   = funbas(basis);
 
-% setting initial guess for basis coefficients c
+% Setting initial guess for basis coefficients c
 c = zeros(nbk,nbe);
 %load c;
 %load c_gscoll;
 
-% initialization of various matrices
+% Initializating some matrices
 Tv = zeros(nbk,nbe); 
 dr = zeros(nbk,nbe);
 C = zeros(nbk,nbe);
 util = zeros(nbk,nbe);
 
-% starting iterations
+% Iterations
 for it=1:1000
     
    cold   = c;
@@ -61,9 +72,10 @@ for it=1:1000
               
 end
 
-Kp = kgrid(dr); % getting the optimal policy K'* for each K in the grid
+% Getting the optimal policy K'* for each K in the grid
+Kp = kgrid(dr); 
 
-% computing the optimal policy C* for each K in the grid
+% Computing the optimal policy C* for each K in the grid
 for k=1:nbe;
 C(:,k) = Z(k).*(kgrid.^alpha) + (1-delta).*kgrid - Kp(:,k);
 end
@@ -71,7 +83,8 @@ neg = C<0;
 C(neg) = 1e-6;
 util(neg) = -1e12;
 
-t = toc; % getting the duration in processor time
+% Getting the duration in processor time
+t = toc; t;
 
 save ('Kp','Kp');
 save ('C','C');
