@@ -83,10 +83,11 @@ neg = C<0;
 C(neg) = 1e-6;
 util(neg) = -1e12;
 
-% Getting the duration in processor time
-t = toc; t;
+% Closing chrono
+t = toc;
 
-% save ('Kp','Kp'); save ('C','C'); save ('t','t')
+% Saving results
+save ('Kp','Kp'); save ('C','C'); save ('t','t'); save ('c','c')
 
 
 %% Simulating the solved stochastic growth model
